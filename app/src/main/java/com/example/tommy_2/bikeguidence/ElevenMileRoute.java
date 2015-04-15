@@ -1,3 +1,5 @@
+//this is a test comment to see if it works
+
 package com.example.tommy_2.bikeguidence;
 
 import android.os.Bundle;
