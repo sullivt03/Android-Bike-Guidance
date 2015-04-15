@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/voiceOn"
+        android:title="@string/voice_title"
+        android:checkable="true" />
+    android:showAsAction="ifRoom"
+
+    <item
+        android:id="@+id/pauseRoute"
+        android:title="@string/pause_title"
+        android:checkable="true" />
+
+    <item
+        android:id="@+id/changeRoute"
+        android:title="@string/change_title"/>
+    android:showAsAction="never"
+
+
+</menu>

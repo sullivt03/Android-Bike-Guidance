@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Bicycle Navigation</string>
+    <string name="login">Please log in</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">Enter User Name</string>
+    <string name="user_pass">Enter Password</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_login">Login</string>
+    <string name="Download">Download</string>
+    <string name="voice_title">Voice guidance enabled: </string>
+    <string name="change_title">Change route: </string>
+    <string name="pause_title">Pause route guidance: </string>
+</resources>

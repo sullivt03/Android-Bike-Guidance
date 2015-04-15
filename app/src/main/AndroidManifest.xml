@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tommy_2.bikeguidence" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="BikeGuidence"
+        android:theme="@style/AppTheme" >
+
+        <!-- Splash screen -->
+        <activity
+            android:name="com.example.tommy_2.bikeguidence.RouteSelection"
+            android:label="BikeGuidenceApp"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- User agreement activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.UserAgreement"/>
+
+        <!-- login activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.Login"/>
+
+        <!-- route selection activity
+        <activity android:name="com.example.tommy_2.bikeguidence.RouteSelection"/> -->
+
+        <!-- 11 mile map preview activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.ElevenMileRoute"/>
+
+        <!-- 20 mile map preview activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.TwentyMileMap"/>
+
+        <!-- 45 mile map preview activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.FortyFiveMileMap"/>
+
+        <!-- 62 mile map preview activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.SixtyTwoMileMap"/>
+
+        <!-- Map activity -->
+        <activity android:name="com.example.tommy_2.bikeguidence.MyGeolocationMap"/>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    </manifest>
+

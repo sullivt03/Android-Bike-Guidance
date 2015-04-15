@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="bopprs.bikeapp.RouteSelection">
+
+    <TextView
+        android:text="Please make your route selection now."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Eleven Mile Route"
+        android:id="@+id/route_selection_1"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/route_selection_4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Twenty Mile Route"
+        android:id="@+id/route_selection_2"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Forty Five Mile Route"
+        android:id="@+id/route_selection_3"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/route_selection_4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Sixty Two Mile Route"
+        android:id="@+id/route_selection_4"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/route_selection_2"
+        android:layout_alignLeft="@+id/route_selection_2"
+        android:layout_alignStart="@+id/route_selection_2"
+        android:layout_marginTop="52dp" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:id="@+id/route_selection_exit"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
