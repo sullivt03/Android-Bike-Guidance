@@ -10,7 +10,7 @@
 
         <!-- Splash screen -->
         <activity
-            android:name="com.example.tommy_2.bikeguidence.RouteSelection"
+            android:name="com.example.tommy_2.bikeguidence.ElevenMileRoute"
             android:label="BikeGuidenceApp"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
@@ -29,8 +29,8 @@
         <!-- route selection activity
         <activity android:name="com.example.tommy_2.bikeguidence.RouteSelection"/> -->
 
-        <!-- 11 mile map preview activity -->
-        <activity android:name="com.example.tommy_2.bikeguidence.ElevenMileRoute"/>
+        <!-- 11 mile map preview activity
+        <activity android:name="com.example.tommy_2.bikeguidence.ElevenMileRoute"/> -->
 
         <!-- 20 mile map preview activity -->
         <activity android:name="com.example.tommy_2.bikeguidence.TwentyMileMap"/>

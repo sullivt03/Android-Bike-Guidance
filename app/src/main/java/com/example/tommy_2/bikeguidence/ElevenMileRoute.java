@@ -2,11 +2,12 @@
 
 package com.example.tommy_2.bikeguidence;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.mapquest.android.maps.LineOverlay;
@@ -19,9 +20,10 @@ import com.mapquest.android.maps.RouteResponse;
 import com.mapquest.android.maps.ServiceResponse;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
-public class ElevenMileRoute extends SimpleMap {
+public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
 
     ArrayList<String> points = new ArrayList<String>(){{
             add("39.711845 , -75.116701");
@@ -44,6 +46,11 @@ public class ElevenMileRoute extends SimpleMap {
     protected MapView map;
     private MyLocationOverlay myLocationOverlay;
     protected LineOverlay routeLine = new LineOverlay();
+    //TTS object
+    private TextToSpeech myTTS;
+    //status check code
+    private int MY_DATA_CHECK_CODE = 0;
+    RouteResponse.Route.Leg routeResponse;
 
     public static ArrayList setGeoList(String [] LatLngs){
         ArrayList<GeoPoint> data = new ArrayList<GeoPoint>();
@@ -56,8 +63,6 @@ public class ElevenMileRoute extends SimpleMap {
         return data;
     }
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +70,11 @@ public class ElevenMileRoute extends SimpleMap {
         setupMapView();
         setupMyLocation();
         init();
+
+        //check for TTS data
+        Intent checkTTSIntent = new Intent();
+        checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        startActivityForResult(checkTTSIntent, MY_DATA_CHECK_CODE);
     }
 
     // set your map and enable default zoom controls
@@ -116,6 +126,44 @@ public class ElevenMileRoute extends SimpleMap {
 
     }
 
+    //speak the user text
+    private void speakWords() {
+        String speech = "Hello, this is a test input";
+        //String speech = RouteResponse.route.Leg.Maneuver.narrative;
+        //speak straight away
+        myTTS.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    //act on result of TTS data check
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == MY_DATA_CHECK_CODE) {
+            if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
+                //the user has the necessary data - create the TTS
+                myTTS = new TextToSpeech(this, this);
+            }
+            else {
+                //no data - install it now
+                Intent installTTSIntent = new Intent();
+                installTTSIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+                startActivity(installTTSIntent);
+            }
+        }
+    }
+
+    //setup TTS
+    public void onInit(int initStatus) {
+
+        //check for successful instantiation
+        if (initStatus == TextToSpeech.SUCCESS) {
+            if(myTTS.isLanguageAvailable(Locale.US)==TextToSpeech.LANG_AVAILABLE)
+                myTTS.setLanguage(Locale.US);
+        }
+        else if (initStatus == TextToSpeech.ERROR) {
+            Toast.makeText(this, "Sorry! Text To Speech failed...", Toast.LENGTH_LONG).show();
+        }
+    }
+
     @Override
     protected void init() {
         super.init();
@@ -147,6 +195,10 @@ public class ElevenMileRoute extends SimpleMap {
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
+                //clearButton.setVisibility(View.VISIBLE);
+                //String routeSpeak = routeResponse.route.narrative;
+                //routeTime = routeResponse.route.time;
+                //String str= "Time:  "+ routeTime;
                 createRouteButton.setEnabled(true);
             }
         });
@@ -162,6 +214,7 @@ public class ElevenMileRoute extends SimpleMap {
                 //String endAt = getText(end);
                 //routeManager.createRoute(startAt, endAt);
                 routeManager.createRoute(points);
+                speakWords();
             }
         });
 
