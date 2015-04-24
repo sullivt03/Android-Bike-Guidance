@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Team1</name>
+    <about>Bike the Beach 2015.</about>
+    <phonenumber>2034294357</phonenumber>
+    <routes>
+        <option>
+            <routename>11 Mile Route</routename>
+            <totaldistance>11.3</totaldistance>
+            <numsteps>21</numsteps>
+            <directions>
+                <step>
+                    <start>Parking Lot Guard House</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143794</latitude>
+                    <longitude>-73.236177</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143454</latitude>
+                    <longitude>-73.236885</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.145765</latitude>
+                    <longitude>-73.247142</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Straight</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.138186</latitude>
+                    <longitude>-73.255575</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.132934</latitude>
+                    <longitude>-73.272870</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.137798</latitude>
+                    <longitude>-73.273256</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.137669</latitude>
+                    <longitude>-73.275680</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.130849</latitude>
+                    <longitude>-73.284993</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.131641</latitude>
+                    <longitude>-73.289735</longitude>
+                </step>
+                <step>
+                    <start>Beachside Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.2</distance>
+                    <latitude>41.124788</latitude>
+                    <longitude>-73.299177</longitude>
+                </step>
+                <step>
+                    <start>New Creek Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.119147</latitude>
+                    <longitude>-73.317072</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.123592</latitude>
+                    <longitude>-73.316193</longitude>
+                </step>
+                <step>
+                    <start>Sasco Creek Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.128602</latitude>
+                    <longitude>-73.306901</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue past Southport Beach</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.124772</latitude>
+                    <longitude>-73.299177</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.131592</latitude>
+                    <longitude>-73.289735</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road. Follow over bridge</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.8</distance>
+                    <latitude>41.130865</latitude>
+                    <longitude>-73.284993</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.137815</latitude>
+                    <longitude>-73.273277</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.132934</latitude>
+                    <longitude>-73.272912</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Straight</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.138154</latitude>
+                    <longitude>-73.255553</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.145797</latitude>
+                    <longitude>-73.247099</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road to Jennings Beach</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.142953</latitude>
+                    <longitude>-73.242185</longitude>
+                </step>
+            </directions>
+        </option>
+        <option>
+            <routename>Rowan Route</routename>
+            <totaldistance>3.1</totaldistance>
+            <numsteps>13</numsteps>
+            <directions>
+                <step>
+                    <start>Lot B</start>
+                    <direction>toward Carpenter Street</direction>
+                    <distance>0.027</distance>
+                    <latitude>39.711845</latitude>
+                    <longitude>-75.116701</longitude>
+                </step>
+                <step>
+                    <start>Carpenter Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>39.711952</latitude>
+                    <longitude>-75.115950</longitude>
+                </step>
+                <step>
+                    <start>County Road 553 Alt/North Main Street</start>
+                    <direction>Slight Right</direction>
+                    <distance>0.067</distance>
+                    <latitude>39.707586</latitude>
+                    <longitude>-75.111090</longitude>
+                </step>
+                <step>
+                    <start>Mullica Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>39.706645</latitude>
+                    <longitude>-75.111111</longitude>
+                </step>
+                <step>
+                    <start>Mullica Hill</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.8</distance>
+                    <latitude>39.706950</latitude>
+                    <longitude>-75.113944</longitude>
+                </step>
+                <step>
+                    <start>Joseph L Bowe Boulevard</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>39.711209</latitude>
+                    <longitude>-75.127484</longitude>
+                </step>
+                <step>
+                    <start>North Campus Drive</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>39.713784</latitude>
+                    <longitude>-75.123535</longitude>
+                </step>
+                <step>
+                    <start>Robinson Circle</start>
+                    <direction>Slight Right</direction>
+                    <distance>0.12</distance>
+                    <latitude>39.711581</latitude>
+                    <longitude>-75.120370</longitude>
+                </step>
+                <step>
+                    <start>North Campus Drive</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>39.711160</latitude>
+                    <longitude>-75.119319</longitude>
+                </step>
+                <step>
+                    <start>Carpenter Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.4</distance>
+                    <latitude>39.711952</latitude>
+                    <longitude>-75.115950</longitude>
+                </step>
+                <step>
+                    <start>Joseph L Bowe Boulevard</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>39.715765</latitude>
+                    <longitude>-75.120596</longitude>
+                </step>
+                <step>
+                    <start>North Campus Drive</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>39.713784</latitude>
+                    <longitude>-75.123535</longitude>
+                </step>
+                <step>
+                    <start>Lot M-1</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.057</distance>
+                    <latitude>39.712563</latitude>
+                    <longitude>-75.121819</longitude>
+                </step>
+            </directions>
+        </option>
+        <option>
+            <routename>20 Mile Route</routename>
+            <totaldistance>20.7</totaldistance>
+            <numsteps>25</numsteps>
+            <directions>
+                <step>
+                    <start>Parking Lot Guard House</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143794</latitude>
+                    <longitude>-73.236177</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143454</latitude>
+                    <longitude>-73.236885</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.145765</latitude>
+                    <longitude>-73.247142</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Straight</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.138186</latitude>
+                    <longitude>-73.255575</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.132934</latitude>
+                    <longitude>-73.272870</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.137798</latitude>
+                    <longitude>-73.273256</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.137669</latitude>
+                    <longitude>-73.275680</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.130849</latitude>
+                    <longitude>-73.284993</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.131641</latitude>
+                    <longitude>-73.289735</longitude>
+                </step>
+                <step>
+                    <start>Beachside Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.6</distance>
+                    <latitude>41.124788</latitude>
+                    <longitude>-73.299177</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Slight Left</direction>
+                    <distance>2.3</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Bridge Street</start>
+                    <direction>Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Imperial Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.8</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Baker Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Compo Road South</start>
+                    <direction>Turn Right</direction>
+                    <distance>2.1</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Soundview Drive</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>2.6</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Sasco Creek Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue past Southport Beach</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+                <step>
+                    <start>South Benson Road to Jennings Beach</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude></latitude>
+                    <longitude></longitude>
+                </step>
+            </directions>
+        </option>
+        <option>
+            <routename>45 Mile Route</routename>
+            <totaldistance>46.6</totaldistance>
+            <numsteps>77</numsteps>
+            <directions>
+                <step>
+                    <start>Parking Lot Guard House</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143794</latitude>
+                    <longitude>-73.236177</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143454</latitude>
+                    <longitude>-73.236885</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.145765</latitude>
+                    <longitude>-73.247142</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Straight</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.138186</latitude>
+                    <longitude>-73.255575</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.132934</latitude>
+                    <longitude>-73.272870</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.137798</latitude>
+                    <longitude>-73.273256</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.137669</latitude>
+                    <longitude>-73.275680</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.130849</latitude>
+                    <longitude>-73.284993</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.131641</latitude>
+                    <longitude>-73.289735</longitude>
+                </step>
+                <step>
+                    <start>Beachside Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.6</distance>
+                    <latitude>41.124795</latitude>
+                    <longitude>-73.299134</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Slight Left</direction>
+                    <distance>2.3</distance>
+                    <latitude>41.121252</latitude>
+                    <longitude>-73.320681</longitude>
+                </step>
+                <step>
+                    <start>Bridge Street</start>
+                    <direction>Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.122109</latitude>
+                    <longitude>-73.361322</longitude>
+                </step>
+                <step>
+                    <start>Riverside Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.122416</latitude>
+                    <longitude>-73.370302</longitude>
+                </step>
+                <step>
+                    <start>Charles Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.120226</latitude>
+                    <longitude>-73.370463</longitude>
+                </step>
+                <step>
+                    <start>Saugatuck Avenue(route 136)</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.8</distance>
+                    <latitude>41.119288</latitude>
+                    <longitude>-73.374346</longitude>
+                </step>
+                <step>
+                    <start>Duck Pond Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.107301</latitude>
+                    <longitude>-73.384335</longitude>
+                </step>
+                <step>
+                    <start>Old Saugatuck Road[Norwalk]</start>
+                    <direction>Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.102660</latitude>
+                    <longitude>-73.384668</longitude>
+                </step>
+                <step>
+                    <start>Pine Hill Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.101156</latitude>
+                    <longitude>-73.398652</longitude>
+                </step>
+                <step>
+                    <start>Marvin Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.095747</latitude>
+                    <longitude>-73.396668</longitude>
+                </step>
+                <step>
+                    <start>Canfield Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.090251</latitude>
+                    <longitude>-73.391044</longitude>
+                </step>
+                <step>
+                    <start>Calf Pasture Beach Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.8</distance>
+                    <latitude>41.087663</latitude>
+                    <longitude>-73.393983</longitude>
+                </step>
+                <step>
+                    <start>Gregory Boulevard</start>
+                    <direction>Quick Left then Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.095426</latitude>
+                    <longitude>-73.397921</longitude>
+                </step>
+                <step>
+                    <start>First Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.099003</latitude>
+                    <longitude>-73.400622</longitude>
+                </step>
+                <step>
+                    <start>Seaview Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.097935</latitude>
+                    <longitude>-73.405547</longitude>
+                </step>
+                <step>
+                    <start>Fort Point/Washington Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.099722</latitude>
+                    <longitude>-73.411877</longitude>
+                </step>
+                <step>
+                    <start>Martin Luther King Drive</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.6</distance>
+                    <latitude>41.099415</latitude>
+                    <longitude>-73.421994</longitude>
+                </step>
+                <step>
+                    <start>Wilson Avenue</start>
+                    <direction>Straight</direction>
+                    <distance>1.4</distance>
+                    <latitude>41.072697</latitude>
+                    <longitude>-73.428116</longitude>
+                </step>
+                <step>
+                    <start>Rowayton Avenue(Route 136)</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.068863</latitude>
+                    <longitude>-73.443125</longitude>
+                </step>
+                <step>
+                    <start>Toneneke Road</start>
+                    <direction>Straight</direction>
+                    <distance>1.2</distance>
+                    <latitude>41.073155</latitude>
+                    <longitude>-73.447992</longitude>
+                </step>
+                <step>
+                    <start>Old Kings Highway South</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.077188</latitude>
+                    <longitude>-73.468356</longitude>
+                </step>
+                <step>
+                    <start>Old Kings Highway South</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.073454</latitude>
+                    <longitude>-73.469892</longitude>
+                </step>
+                <step>
+                    <start>Goodwives River Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.068641</latitude>
+                    <longitude>-73.476778</longitude>
+                </step>
+                <step>
+                    <start>Pear Tree Point Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.0556974</latitude>
+                    <longitude>-73.478693</longitude>
+                </step>
+                <step>
+                    <start>Long Neck Point Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.044927</latitude>
+                    <longitude>-73.478870</longitude>
+                </step>
+                <step>
+                    <start>Rings End Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.055688</latitude>
+                    <longitude>-73478699</longitude>
+                </step>
+                <step>
+                    <start>Post Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.061140</latitude>
+                    <longitude>-73.484921</longitude>
+                </step>
+                <step>
+                    <start>Old Kings Highway South</start>
+                    <direction>Turn Right</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.062313</latitude>
+                    <longitude>-73482615</longitude>
+                </step>
+                <step>
+                    <start>Locust Hill Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.073961</latitude>
+                    <longitude>-73.468109</longitude>
+                </step>
+                <step>
+                    <start>Old Farm Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.074301</latitude>
+                    <longitude>-73.459709</longitude>
+                </step>
+                <step>
+                    <start>Tokeneke Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.074527</latitude>
+                    <longitude>-73.459623</longitude>
+                </step>
+                <step>
+                    <start>Cudlipp Street [Rowayton]</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.073144</latitude>
+                    <longitude>-73.448046</longitude>
+                </step>
+                <step>
+                    <start>Rowayton Avenue</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.070920</latitude>
+                    <longitude>-73.443176</longitude>
+                </step>
+                <step>
+                    <start>McKinley Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.065533</latitude>
+                    <longitude>-73.443991</longitude>
+                </step>
+                <step>
+                    <start>Roton Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.064894</latitude>
+                    <longitude>-73.440847</longitude>
+                </step>
+                <step>
+                    <start>Pine Point Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.059692</latitude>
+                    <longitude>-73.439217</longitude>
+                </step>
+                <step>
+                    <start>Gull Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.057791</latitude>
+                    <longitude>-73.438626</longitude>
+                </step>
+                <step>
+                    <start>Ensign Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.057856</latitude>
+                    <longitude>-73.437951</longitude>
+                </step>
+                <step>
+                    <start>Crescent Beach Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.057249</latitude>
+                    <longitude>-73.437715</longitude>
+                </step>
+                <step>
+                    <start>Yarmouth Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.057063</latitude>
+                    <longitude>-73.435311</longitude>
+                </step>
+                <step>
+                    <start>Westmere Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.057605</latitude>
+                    <longitude>-73.435150</longitude>
+                </step>
+                <step>
+                    <start>Bluff Avenue</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.062418</latitude>
+                    <longitude>-73.435258</longitude>
+                </step>
+                <step>
+                    <start>Wilson Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.067709</latitude>
+                    <longitude>-73.433992</longitude>
+                </step>
+                <step>
+                    <start>Martin Luther King Drive</start>
+                    <direction>Continue Straight</direction>
+                    <distance>1.7</distance>
+                    <latitude>41.075983</latitude>
+                    <longitude>-73.427930</longitude>
+                </step>
+                <step>
+                    <start>Washington Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.099450</latitude>
+                    <longitude>-73.422018</longitude>
+                </step>
+                <step>
+                    <start>Seaview Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.099733</latitude>
+                    <longitude>-73.411922</longitude>
+                </step>
+                <step>
+                    <start>First Street/Sycamore</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.097978</latitude>
+                    <longitude>-73.405689</longitude>
+                </step>
+                <step>
+                    <start>Pine Hill Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.099256</latitude>
+                    <longitude>-73.398061</longitude>
+                </step>
+                <step>
+                    <start>Old Saugatuck Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.8</distance>
+                    <latitude>41.101164</latitude>
+                    <longitude>-73.398683</longitude>
+                </step>
+                <step>
+                    <start>Duck Pond Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.102651</latitude>
+                    <longitude>-73.384650</longitude>
+                </step>
+                <step>
+                    <start>Saugatuck Avenue</start>
+                    <direction>Turn Right </direction>
+                    <distance>0.8</distance>
+                    <latitude>41.107276</latitude>
+                    <longitude>-73.384339</longitude>
+                </step>
+                <step>
+                    <start>Ferry Lane</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.117638</latitude>
+                    <longitude>-73.375080</longitude>
+                </step>
+                <step>
+                    <start>Riverside Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.119320</latitude>
+                    <longitude>-73.370359</longitude>
+                </step>
+                <step>
+                    <start>Bridge Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.122415</latitude>
+                    <longitude>-73.370327</longitude>
+                </step>
+                <step>
+                    <start>Imperial Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.123326</latitude>
+                    <longitude>-73.366519</longitude>
+                </step>
+                <step>
+                    <start>Baker Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.133370</latitude>
+                    <longitude>-73.360823</longitude>
+                </step>
+                <step>
+                    <start>Compo Road South</start>
+                    <direction>Turn Right</direction>
+                    <distance>2.1</distance>
+                    <latitude>41.132619</latitude>
+                    <longitude>-73.356939</longitude>
+                </step>
+                <step>
+                    <start>Soundview Drive(becomes Hillspoint)</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.108259</latitude>
+                    <longitude>-73.347438</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>1.7</distance>
+                    <latitude>41.123600</latitude>
+                    <longitude>-73.345818</longitude>
+                </step>
+                <step>
+                    <start>Green Farms Road</start>
+                    <direction>Slight Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.121378</latitude>
+                    <longitude>-73.321078</longitude>
+                </step>
+                <step>
+                    <start>Sasco Creek Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.128667</latitude>
+                    <longitude>-73.306926</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.124788</latitude>
+                    <longitude>-73.299166</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.131621</latitude>
+                    <longitude>-73.289735</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.130853</latitude>
+                    <longitude>-73.285015</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.137859</latitude>
+                    <longitude>-73.273256</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.132938</latitude>
+                    <longitude>-73.272934</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.139509</latitude>
+                    <longitude>-73.253795</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.145820</latitude>
+                    <longitude>-73.247100</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road to Jennings Beach</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.142992</latitude>
+                    <longitude>-73.242164</longitude>
+                </step>
+            </directions>
+        </option>
+        <option>
+            <routename>62 Mile Route</routename>
+            <totaldistance>62.9</totaldistance>
+            <numsteps>96</numsteps>
+            <directions>
+                <step>
+                    <start>Parking Lot Guard House</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143794</latitude>
+                    <longitude>-73.236177</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.143454</latitude>
+                    <longitude>-73.236885</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.145765</latitude>
+                    <longitude>-73.247142</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Straight</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.138186</latitude>
+                    <longitude>-73.255575</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.132934</latitude>
+                    <longitude>-73.272870</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.137798</latitude>
+                    <longitude>-73.273256</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.137669</latitude>
+                    <longitude>-73.275680</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.130849</latitude>
+                    <longitude>-73.284993</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.131641</latitude>
+                    <longitude>-73.289735</longitude>
+                </step>
+                <step>
+                    <start>Beachside Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.6</distance>
+                    <latitude>41.124804</latitude>
+                    <longitude>-73.299177</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Slight Left</direction>
+                    <distance>2.3</distance>
+                    <latitude>41.119147</latitude>
+                    <longitude>-73.317051</longitude>
+                </step>
+                <step>
+                    <start>Bridge Street</start>
+                    <direction>Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.122089</latitude>
+                    <longitude>-73.361318</longitude>
+                </step>
+                <step>
+                    <start>Riverside Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.122428</latitude>
+                    <longitude>-73.370309</longitude>
+                </step>
+                <step>
+                    <start>Charles Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.119728</latitude>
+                    <longitude>-73.372999</longitude>
+                </step>
+                <step>
+                    <start>Saugatuck Avenue(route 136)</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.8</distance>
+                    <latitude>41.119978</latitude>
+                    <longitude>-73.374019</longitude>
+                </step>
+                <step>
+                    <start>Duck Pond Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.107256</latitude>
+                    <longitude>-73.384329</longitude>
+                </step>
+                <step>
+                    <start>Old Saugatuck Road[Norwalk]</start>
+                    <direction>Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.100885</latitude>
+                    <longitude>-73.387548</longitude>
+                </step>
+                <step>
+                    <start>Pine Hill Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.101136</latitude>
+                    <longitude>-73.398706</longitude>
+                </step>
+                <step>
+                    <start>Marvin Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.095767</latitude>
+                    <longitude>-73.396678</longitude>
+                </step>
+                <step>
+                    <start>Canfield Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.096204</latitude>
+                    <longitude>-73.394564</longitude>
+                </step>
+                <step>
+                    <start>Calf Pasture Beach Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.8</distance>
+                    <latitude>41.087665</latitude>
+                    <longitude>-73.393942</longitude>
+                </step>
+                <step>
+                    <start>Gregory Boulevard</start>
+                    <direction>Quick Left then Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.095443</latitude>
+                    <longitude>-73.397921</longitude>
+                </step>
+                <step>
+                    <start>First Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.098956</latitude>
+                    <longitude>-73.400550</longitude>
+                </step>
+                <step>
+                    <start>Seaview Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.097918</latitude>
+                    <longitude>-73.405233</longitude>
+                </step>
+                <step>
+                    <start>Fort Point/Washington Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.099721</latitude>
+                    <longitude>-73.411752</longitude>
+                </step>
+                <step>
+                    <start>Martin Luther King Drive</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.6</distance>
+                    <latitude>41.099454</latitude>
+                    <longitude>-73.421987</longitude>
+                </step>
+                <step>
+                    <start>Wilson Avenue</start>
+                    <direction>Straight</direction>
+                    <distance>1.4</distance>
+                    <latitude>41.075987</latitude>
+                    <longitude>-73.427963</longitude>
+                </step>
+                <step>
+                    <start>Rowayton Avenue(Route 136)</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.068910</latitude>
+                    <longitude>-73.443402</longitude>
+                </step>
+                <step>
+                    <start>Toneneke Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>1.3</distance>
+                    <latitude>41.071644</latitude>
+                    <longitude>-73.445483</longitude>
+                </step>
+                <step>
+                    <start>Post Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.076992</latitude>
+                    <longitude>-73.470201</longitude>
+                </step>
+                <step>
+                    <start>Mechanic Street/Old Kings Highway North</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.077329</latitude>
+                    <longitude>-73.470016</longitude>
+                </step>
+                <step>
+                    <start>Pine Brook/Brookside Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>2.9</distance>
+                    <latitude>41.080421</latitude>
+                    <longitude>-73.464767</longitude>
+                </step>
+                <step>
+                    <start>White Oak Shade Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.2</distance>
+                    <latitude>41.120713</latitude>
+                    <longitude>-73.472502</longitude>
+                </step>
+                <step>
+                    <start>Main Street</start>
+                    <direction>Continue Straight</direction>
+                    <distance>1.8</distance>
+                    <latitude>41.136494</latitude>
+                    <longitude>-73.480246</longitude>
+                </step>
+                <step>
+                    <start>Lakeview Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.143498</latitude>
+                    <longitude>-73.487727</longitude>
+                </step>
+                <step>
+                    <start>Route 123(First Traffic Light)</start>
+                    <direction>Turn Left</direction>
+                    <distance>2.1</distance>
+                    <latitude>41.145630</latitude>
+                    <longitude>-73.480070</longitude>
+                </step>
+                <step>
+                    <start>Country Club Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.170587</latitude>
+                    <longitude>-73.495061</longitude>
+                </step>
+                <step>
+                    <start>Lambert Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.168859</latitude>
+                    <longitude>-73.501906</longitude>
+                </step>
+                <step>
+                    <start>Oenoke Ridge</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.159466</latitude>
+                    <longitude>-73502898</longitude>
+                </step>
+                <step>
+                    <start>Park Street</start>
+                    <direction>Sudden Right</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.148738</latitude>
+                    <longitude>-73.494937</longitude>
+                </step>
+                <step>
+                    <start>Old Stamford Road (Route 106)</start>
+                    <direction>Turn Right</direction>
+                    <distance>1.2</distance>
+                    <latitude>41.137491</latitude>
+                    <longitude>-73.494079</longitude>
+                </step>
+                <step>
+                    <start>Lapham Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.124974</latitude>
+                    <longitude>-73.495484</longitude>
+                </step>
+                <step>
+                    <start>Hollow Tree Ridge Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.114557</latitude>
+                    <longitude>-73.493414</longitude>
+                </step>
+                <step>
+                    <start>Ox Ridge Lane</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.102100</latitude>
+                    <longitude>-73.492502</longitude>
+                </step>
+                <step>
+                    <start>Middlesex Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>1.2</distance>
+                    <latitude>41.099288</latitude>
+                    <longitude>-73.486636</longitude>
+                </step>
+                <step>
+                    <start>Leroy Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.083060</latitude>
+                    <longitude>-73.485515</longitude>
+                </step>
+                <step>
+                    <start>Squab Lane thru station parking lot</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.076416</latitude>
+                    <longitude>-73.474512</longitude>
+                </step>
+                <step>
+                    <start>Tokeneke Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.076612</latitude>
+                    <longitude>-73.472363</longitude>
+                </step>
+                <step>
+                    <start>Old Kings Highway South</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.077086</latitude>
+                    <longitude>-73.468342</longitude>
+                </step>
+                <step>
+                    <start>Old Kings Highway</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.073454</latitude>
+                    <longitude>-73.469886</longitude>
+                </step>
+                <step>
+                    <start>Goodwives River Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.068955</latitude>
+                    <longitude>-73.476458</longitude>
+                </step>
+                <step>
+                    <start>Pear Tree Point Road</start>
+                    <direction>Continue straight</direction>
+                    <distance>1.0</distance>
+                    <latitude>41.055685</latitude>
+                    <longitude>-73.478684</longitude>
+                </step>
+                <step>
+                    <start>Long Neck Point Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.044935</latitude>
+                    <longitude>-73.478844</longitude>
+                </step>
+                <step>
+                    <start>Rings End Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.055709</latitude>
+                    <longitude>-73.478705</longitude>
+                </step>
+                <step>
+                    <start>Post Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.061137</latitude>
+                    <longitude>-73.484938</longitude>
+                </step>
+                <step>
+                    <start>Old Kings Highway South</start>
+                    <direction>Turn Right</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.062331</latitude>
+                    <longitude>-73.482551</longitude>
+                </step>
+                <step>
+                    <start>Locust Hill Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.073454</latitude>
+                    <longitude>-73.469848</longitude>
+                </step>
+                <step>
+                    <start>Old Farm Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.074311</latitude>
+                    <longitude>-73.459725</longitude>
+                </step>
+                <step>
+                    <start>Tokeneke Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.074562</latitude>
+                    <longitude>-73.459618</longitude>
+                </step>
+                <step>
+                    <start>Cudlipp Street</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.073148</latitude>
+                    <longitude>-73.448032</longitude>
+                </step>
+                <step>
+                    <start>Rowayton Avenue</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.070950</latitude>
+                    <longitude>-73.443184</longitude>
+                </step>
+                <step>
+                    <start>McKinley Street</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.065530</latitude>
+                    <longitude>-73.444032</longitude>
+                </step>
+                <step>
+                    <start>Roton Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.064899</latitude>
+                    <longitude>-73.440845</longitude>
+                </step>
+                <step>
+                    <start>Pine Point Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.059659</latitude>
+                    <longitude>-73.439176</longitude>
+                </step>
+                <step>
+                    <start>Gull Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.057750</latitude>
+                    <longitude>-73.438618</longitude>
+                </step>
+                <step>
+                    <start>Ensign Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.0</distance>
+                    <latitude>41.057855</latitude>
+                    <longitude>-73.437953</longitude>
+                </step>
+                <step>
+                    <start>Crescent Beach Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.057224</latitude>
+                    <longitude>-73.437739</longitude>
+                </step>
+                <step>
+                    <start>Yarmouth Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.057074</latitude>
+                    <longitude>-73.435318</longitude>
+                </step>
+                <step>
+                    <start>Westmere Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.1</distance>
+                    <latitude>41.057616</latitude>
+                    <longitude>-73.435136</longitude>
+                </step>
+                <step>
+                    <start>Bluff Avenue</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.062413</latitude>
+                    <longitude>-73.435254</longitude>
+                </step>
+                <step>
+                    <start>Wilson Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.067696</latitude>
+                    <longitude>-73.433945</longitude>
+                </step>
+                <step>
+                    <start>Martin Luther King Drive</start>
+                    <direction>Continue Straight</direction>
+                    <distance>1.7</distance>
+                    <latitude>41.075986</latitude>
+                    <longitude>-73.427937</longitude>
+                </step>
+                <step>
+                    <start>Washington Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.099429</latitude>
+                    <longitude>-73.422014</longitude>
+                </step>
+                <step>
+                    <start>Seaview Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.099744</latitude>
+                    <longitude>-73.411897</longitude>
+                </step>
+                <step>
+                    <start>First Street/Sycamore</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.4</distance>
+                    <latitude>41.098047</latitude>
+                    <longitude>-73.405693</longitude>
+                </step>
+                <step>
+                    <start>Pine Hill Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.099284</latitude>
+                    <longitude>-73.398033</longitude>
+                </step>
+                <step>
+                    <start>Old Saugatuck Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.101152</latitude>
+                    <longitude>-73.398719</longitude>
+                </step>
+                <step>
+                    <start>Duck Pond Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.102648</latitude>
+                    <longitude>-73.384654</longitude>
+                </step>
+                <step>
+                    <start>Saugatuck Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.107259</latitude>
+                    <longitude>-73.384351</longitude>
+                </step>
+                <step>
+                    <start>Ferry Lane</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.117614</latitude>
+                    <longitude>-73.375103</longitude>
+                </step>
+                <step>
+                    <start>Riverside Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.119303</latitude>
+                    <longitude>-73.370350</longitude>
+                </step>
+                <step>
+                    <start>Bridge Street</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.122414</latitude>
+                    <longitude>-73.370329</longitude>
+                </step>
+                <step>
+                    <start>Imperial Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.123344</latitude>
+                    <longitude>-73.366531</longitude>
+                </step>
+                <step>
+                    <start>Baker Avenue</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.2</distance>
+                    <latitude>41.133365</latitude>
+                    <longitude>-73.360834</longitude>
+                </step>
+                <step>
+                    <start>Compo Road South</start>
+                    <direction>Turn Right</direction>
+                    <distance>2.1</distance>
+                    <latitude>41.132597</latitude>
+                    <longitude>-73.356961</longitude>
+                </step>
+                <step>
+                    <start>Soundview Drive(becomes Hillspoint)</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.108229</latitude>
+                    <longitude>-73.347455</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>1.7</distance>
+                    <latitude>41.123619</latitude>
+                    <longitude>-73.345846</longitude>
+                </step>
+                <step>
+                    <start>Greens Farms Road</start>
+                    <direction>Slight Left to Stay on</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.121373</latitude>
+                    <longitude>-73.321079</longitude>
+                </step>
+                <step>
+                    <start>Sasco Creek Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.5</distance>
+                    <latitude>41.128655</latitude>
+                    <longitude>-73.306927</longitude>
+                </step>
+                <step>
+                    <start>Pequot Avenue</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.7</distance>
+                    <latitude>41.124784</latitude>
+                    <longitude>-73.299160</longitude>
+                </step>
+                <step>
+                    <start>Old South Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.131600</latitude>
+                    <longitude>-73.289710</longitude>
+                </step>
+                <step>
+                    <start>Harbor Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.9</distance>
+                    <latitude>41.130873</latitude>
+                    <longitude>-73.285004</longitude>
+                </step>
+                <step>
+                    <start>Sasco Hill Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.137890</latitude>
+                    <longitude>-73.273210</longitude>
+                </step>
+                <step>
+                    <start>Old Field Road</start>
+                    <direction>Turn Left</direction>
+                    <distance>1.1</distance>
+                    <latitude>41.132912</latitude>
+                    <longitude>-73.272953</longitude>
+                </step>
+                <step>
+                    <start>Old Post Road</start>
+                    <direction>Continue Straight</direction>
+                    <distance>0.6</distance>
+                    <latitude>41.139958</latitude>
+                    <longitude>-73.253209</longitude>
+                </step>
+                <step>
+                    <start>Benson Road</start>
+                    <direction>Turn Right</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.145792</latitude>
+                    <longitude>-73.247158</longitude>
+                </step>
+                <step>
+                    <start>South Benson Road to Jennings Beach</start>
+                    <direction>Turn Left</direction>
+                    <distance>0.3</distance>
+                    <latitude>41.142980</latitude>
+                    <longitude>-73.242190</longitude>
+                </step>
+            </directions>
+        </option>
+    </routes>
+</event>
