@@ -27,7 +27,7 @@ public class UserAgreement extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent i=new Intent(
-                UserAgreement.this, RouteSelection.class);
+                UserAgreement.this, Login.class);
         startActivity(i);
     }
 

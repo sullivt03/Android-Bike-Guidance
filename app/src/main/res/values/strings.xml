@@ -8,6 +8,13 @@
     <string name="title_activity_login">Login</string>
     <string name="Download">Download</string>
     <string name="voice_title">Voice guidance enabled: </string>
-    <string name="change_title">Change route: </string>
+    <string name="change_title">Change route </string>
     <string name="pause_title">Pause route guidance: </string>
+    <string name="call_title">Call event help-line </string>
+    <string name="title_activity_download">Download</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_download2">Download2</string>
+    <string name="title_activity_retriever">Retriever</string>
+
 </resources>

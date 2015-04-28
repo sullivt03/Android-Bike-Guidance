@@ -2,7 +2,9 @@
 
 package com.example.tommy_2.bikeguidence;
 
+import com.example.tommy_2.bikeguidence.DataRetriever;
 import android.content.Intent;
+import android.location.*;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -11,6 +13,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.mapquest.android.maps.LineOverlay;
+import com.mapquest.android.maps.RouteResponse.Route;
+import com.mapquest.android.maps.RouteResponse.Route.Leg;
 
 import com.mapquest.android.maps.GeoPoint;
 import com.mapquest.android.maps.MapView;
@@ -42,6 +46,13 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     }};
 
 
+    DataRetriever getter = new DataRetriever(this);
+    int route = 1; //getRouteID from activity file.
+    int step =1;
+    int count = 0;
+    String lat = getter.getLat(route,step);
+    String lon = getter.getLon(route, step);
+    Double [] CurrLeg = new Double[]{Double.parseDouble(lat), Double.parseDouble(lon)};
 
     protected MapView map;
     private MyLocationOverlay myLocationOverlay;
@@ -50,7 +61,6 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     private TextToSpeech myTTS;
     //status check code
     private int MY_DATA_CHECK_CODE = 0;
-    RouteResponse.Route.Leg routeResponse;
 
     public static ArrayList setGeoList(String [] LatLngs){
         ArrayList<GeoPoint> data = new ArrayList<GeoPoint>();
@@ -127,9 +137,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     }
 
     //speak the user text
-    private void speakWords() {
+    private void speakWords(String s) {
         String speech = "Hello, this is a test input";
-        //String speech = RouteResponse.route.Leg.Maneuver.narrative;
         //speak straight away
         myTTS.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
     }
@@ -195,10 +204,19 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
-                //clearButton.setVisibility(View.VISIBLE);
-                //String routeSpeak = routeResponse.route.narrative;
-                //routeTime = routeResponse.route.time;
-                //String str= "Time:  "+ routeTime;
+
+                //Float [] results = distanceBetween(CurrLeg[0], CurrLeg[1], Location.getLatitude(), Location.getLongitude(), results);
+
+                if(CurrLeg[0] > 30 && CurrLeg[0] < 60 && count % 2 == 0){
+                    speakWords(getter.getLongDirectionText(route, step));
+                    CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
+                    CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
+                    count++;
+                }
+                else if( CurrLeg[0] < 30 && count % 2 == 1){
+                    speakWords(getter.getShortDirectionText(route, step++));
+                    count++;
+                }
                 createRouteButton.setEnabled(true);
             }
         });
@@ -214,7 +232,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 //String endAt = getText(end);
                 //routeManager.createRoute(startAt, endAt);
                 routeManager.createRoute(points);
-                speakWords();
+                //speakWords();
             }
         });
 
