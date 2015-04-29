@@ -256,7 +256,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 Location waypoint = new Location("currentWaypoint");
                 waypoint.setLatitude(CurrLeg[0]);
                 waypoint.setLongitude(CurrLeg[1]);
-
+                //
                 Location position = new Location("currentPosi");
                 GeoPoint posi = myLocationOverlay.getMyLocation();
                 position.setLatitude(posi.getLatitude());
