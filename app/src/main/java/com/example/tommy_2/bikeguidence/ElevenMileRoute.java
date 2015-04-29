@@ -253,15 +253,19 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
-                //Float [] results = distanceBetween(CurrLeg[0], CurrLeg[1], Location.getLatitude(), Location.getLongitude(), results);
+                Location waypoint = new Location("current");
+                waypoint.setLatitude(CurrLeg[0]);
+                waypoint.setLongitude(CurrLeg[1]);
 
-                if(CurrLeg[0] > 30 && CurrLeg[0] < 60 && count % 2 == 0){
+                float dist = waypoint.distanceTo(/*currentPosition*/);
+
+                if(dist > 30 && dist < 60 && count % 2 == 0){
                     speakWords(getter.getLongDirectionText(route, step));
                     CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
                     CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
                     count++;
                 }
-                else if( CurrLeg[0] < 30 && count % 2 == 1){
+                else if(dist < 30 && count % 2 == 1){
                     speakWords(getter.getShortDirectionText(route, step++));
                     count++;
                 }
