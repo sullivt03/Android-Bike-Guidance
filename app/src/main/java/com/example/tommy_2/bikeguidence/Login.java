@@ -8,12 +8,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
 
-public class Login extends ActionBarActivity implements OnClickListener {
+public class Login extends ActionBarActivity {
     private TextView textView;
 
     //menu item values
@@ -25,9 +23,6 @@ public class Login extends ActionBarActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         textView = (TextView) findViewById(R.id.status);
-        Button send =
-                (Button) findViewById(R.id.send_button);
-        send.setOnClickListener(this);
     }
 
     @Override
@@ -103,15 +98,5 @@ public class Login extends ActionBarActivity implements OnClickListener {
     private boolean verify(String username, String password) {
         //call verification service  stub
         return true;
-    }
-
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.send_button:
-                Intent i = new Intent(
-                        null, ElevenMileRoute.class);
-                startActivity(i);
-                break;
-        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.tommy_2.bikeguidence;
 
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -13,28 +14,21 @@ import org.xmlpull.v1.XmlPullParser;
  * The purpose of this class is to parse the data file into the application. The parser will read
  * xml files and store the values in fields.
  *
- * @author Dominick Palazzo 
- * @version 4/24/15
+ * Created by Dominick on 3/27/2015.
+ *
  */
 
-/**
- *	This class parses the XML data file and populates an SQLite database with results. 
- */
+/* parses event xml data file and populates an SQLite database with results. */
 public class DataParser {
-
     //needed for database
     private Context context;
     SQLiteDatabase db;
-
     //needed for XML parser
     private File dataFile; //the dataFile
     private XmlPullParserFactory factory;
     private XmlPullParser parser; //the XML parser
 
-    /**
-     *	@param file The XML data file that will be parsed.
-     *	@param thisContext a Context for the database
-     */
+
     public DataParser(File file, Context thisContext) {
         dataFile = file;
         context = thisContext;
@@ -50,7 +44,6 @@ public class DataParser {
                 "routename VARCHAR," +
                 "totaldistance REAL," +
                 "numsteps INTEGER);");
-
         //create route specific tables named route1, route2,...routeN
         String tName;
         int rNum;
@@ -67,13 +60,8 @@ public class DataParser {
         }
     }
 
-    /**
-     *	The parseData method will take the data from the XML file (assuming correct input)
-     *	and input the data into a database.
-     */
     public void parseData() throws XmlPullParserException, IOException {
         int numRoute = 0;
-
         //routeN table fields
         String numSteps = "";
         String routeName = "";
@@ -84,10 +72,8 @@ public class DataParser {
         String lat = "";
         String lon = "";
         String tableName = "";
-
         //if controller
         String name;
-
         //set up XMLPullParser
         factory = XmlPullParserFactory.newInstance();
         parser = factory.newPullParser();

@@ -2,11 +2,14 @@
 
 package com.example.tommy_2.bikeguidence;
 
-import com.example.tommy_2.bikeguidence.DataRetriever;
 import android.content.Intent;
 import android.location.*;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -46,13 +49,15 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     }};
 
 
-    DataRetriever getter = new DataRetriever(this);
-    int route = 1; //getRouteID from activity file.
+    private boolean voiceOn = true;
+    private boolean pauseRoute = false;
+    DataRetriever getter;
+    int route = 2; //getRouteID from activity file.
     int step =1;
     int count = 0;
-    String lat = getter.getLat(route,step);
-    String lon = getter.getLon(route, step);
-    Double [] CurrLeg = new Double[]{Double.parseDouble(lat), Double.parseDouble(lon)};
+    String lat;
+    String lon;
+    Double [] CurrLeg;
 
     protected MapView map;
     private MyLocationOverlay myLocationOverlay;
@@ -79,6 +84,10 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         setContentView(R.layout.eleven_mile_preview);
         setupMapView();
         setupMyLocation();
+        getter = new DataRetriever(ElevenMileRoute.this);
+        lat = getter.getLat(route,step);
+        lon = getter.getLon(route, step);
+        CurrLeg = new Double[]{Double.parseDouble(lat), Double.parseDouble(lon)};
         init();
 
         //check for TTS data
@@ -126,6 +135,46 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_login, menu);
+        MenuItem voice = menu.findItem(R.id.voiceOn);
+        MenuItem pause = menu.findItem(R.id.pauseRoute);
+        MenuItem change = menu.findItem(R.id.changeRoute);
+        MenuItem call = menu.findItem(R.id.call);
+        voice.setChecked(voiceOn);
+        pause.setChecked(pauseRoute);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.voiceOn:
+                voiceOn = !item.isChecked();
+                item.setChecked(voiceOn);
+                return true;
+            case R.id.pauseRoute:
+                pauseRoute = !item.isChecked();
+                item.setChecked(pauseRoute);
+                return true;
+            case R.id.changeRoute:
+                //call the change route menu
+                Intent intent = new Intent(this, RouteSelection.class);
+                startActivity(intent);
+                return true;
+            case R.id.call:
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:7325399759"));
+                startActivity(callIntent);
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    @Override
     public boolean isRouteDisplayed() {
         return true;
     }
@@ -138,7 +187,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
     //speak the user text
     private void speakWords(String s) {
-        String speech = "Hello, this is a test input";
+        String speech = "In point two miles, turn left onto Carpenter Street";
         //speak straight away
         myTTS.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
     }
@@ -204,7 +253,6 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
-
                 //Float [] results = distanceBetween(CurrLeg[0], CurrLeg[1], Location.getLatitude(), Location.getLongitude(), results);
 
                 if(CurrLeg[0] > 30 && CurrLeg[0] < 60 && count % 2 == 0){

@@ -10,7 +10,7 @@
 
         <!-- Splash screen -->
         <activity
-            android:name="com.example.tommy_2.bikeguidence.Login"
+            android:name="com.example.tommy_2.bikeguidence.LoadScreen"
             android:label="BikeGuidenceApp"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
@@ -23,18 +23,11 @@
         <!-- User agreement activity -->
         <activity android:name="com.example.tommy_2.bikeguidence.UserAgreement"/>
 
-        <!-- login activity -->
-        <activity android:name="com.example.tommy_2.bikeguidence.ElevenMileRoute"/>
-
-        <activity android:name="com.example.tommy_2.bikeguidence.Download" android:label="@string/title_activity_download"/>
-
-        <activity android:name="com.example.tommy_2.bikeguidence.Retriever" android:label="@string/title_activity_retriever"/>
-
         <!-- route selection activity -->
         <activity android:name="com.example.tommy_2.bikeguidence.RouteSelection"/>
 
         <!-- 11 mile map preview activity -->
-        <activity android:name="com.example.tommy_2.bikeguidence.LoadScreen"/>
+        <activity android:name="com.example.tommy_2.bikeguidence.ElevenMileRoute"/>
 
         <!-- 20 mile map preview activity -->
         <activity android:name="com.example.tommy_2.bikeguidence.TwentyMileMap"/>
@@ -47,6 +40,20 @@
 
         <!-- Map activity -->
         <activity android:name="com.example.tommy_2.bikeguidence.MyGeolocationMap"/>
+
+        <activity
+            android:name="com.example.tommy_2.bikeguidence.Login"
+            android:label="@string/title_activity_download" >
+        </activity>
+
+        <activity
+            android:name="com.example.tommy_2.bikeguidence.Download"
+            android:label="@string/title_activity_download" >
+        </activity>
+        <activity
+            android:name="com.example.tommy_2.bikeguidence.Retriever"
+            android:label="@string/title_activity_retriever" >
+        </activity>
 
     </application>
 
