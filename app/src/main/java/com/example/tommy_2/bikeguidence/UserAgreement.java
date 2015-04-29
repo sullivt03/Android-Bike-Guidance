@@ -1,5 +1,6 @@
 package com.example.tommy_2.bikeguidence;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ public class UserAgreement extends Activity implements View.OnClickListener {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.user_agreement);
-
+            //ab.hide();
 
             Button UA_OK =
                     (Button) findViewById(R.id.user_agreement_ok);

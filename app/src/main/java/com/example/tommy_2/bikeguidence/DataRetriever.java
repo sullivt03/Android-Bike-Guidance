@@ -160,7 +160,7 @@ public class DataRetriever {
         return getLat(route, step) + "," + getLon(route, step);
     }
     public String getLongDirectionText(int route, int step){
-        return "In "+getDistance(route, step) + " miles " + getDirection(route, step) + " on " + getStart(route, step+1);
+        return "In " + getDistance(route, step) + " miles, turn " + getDirection(route, step) + " on " + getStart(route, step+1);
 
     }
     public String getShortDirectionText(int route, int step){

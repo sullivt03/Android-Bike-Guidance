@@ -24,6 +24,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
+
         </RelativeLayout>
     </RelativeLayout>
 
@@ -38,8 +39,10 @@
             android:clickable="true"
             android:enabled="true"
             android:apiKey="Kmjtd%7Cluu22gurnq%2Can%3Do5-gzrl"
-            android:layout_below="@id/directionsForm"
-            />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true" />
+
     </RelativeLayout>
 
     <RelativeLayout

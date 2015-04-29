@@ -261,8 +261,9 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 GeoPoint posi = myLocationOverlay.getMyLocation();
                 position.setLatitude(posi.getLatitude());
                 position.setLongitude(posi.getLongitude());
-
+                
                 float dist = waypoint.distanceTo(position);
+
 
                 if(dist > 30 && dist < 60 && count % 2 == 0){
                     speakWords(getter.getLongDirectionText(route, step));
