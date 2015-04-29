@@ -189,7 +189,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     private void speakWords(String s) {
         String speech = "In point two miles, turn left onto Carpenter Street";
         //speak straight away
-        myTTS.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
+        myTTS.speak(s, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     //act on result of TTS data check
@@ -253,12 +253,16 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
-                Location waypoint = new Location("current");
+                Location waypoint = new Location("currentWaypoint");
                 waypoint.setLatitude(CurrLeg[0]);
                 waypoint.setLongitude(CurrLeg[1]);
 
-                float dist = waypoint.distanceTo(/*currentPosition*/);
+                Location position = new Location("currentPosi");
+                GeoPoint posi = myLocationOverlay.getMyLocation();
+                position.setLatitude(posi.getLatitude());
+                position.setLongitude(posi.getLongitude());
 
+                float dist = waypoint.distanceTo(position);
 
                 if(dist > 30 && dist < 60 && count % 2 == 0){
                     speakWords(getter.getLongDirectionText(route, step));
