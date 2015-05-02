@@ -290,12 +290,16 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
             float dist = waypoint.distanceTo(location);
 
             if (dist > 30 && dist < 60 && count % 2 == 0) {
-                speakWords(getter.getLongDirectionText(route, step));
+                if (voiceOn) {
+                    speakWords(getter.getLongDirectionText(route, step));
+                }
                 CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
                 CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
                 count++;
             } else if (dist < 30 && count % 2 == 1) {
-                speakWords(getter.getShortDirectionText(route, step++));
+                if (voiceOn) {
+                    speakWords(getter.getShortDirectionText(route, step++));
+                }
                 count++;
             }
 
@@ -319,7 +323,3 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     }
 
 }
-
-
-
-
