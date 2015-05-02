@@ -51,6 +51,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
+    LocationManager myLocationManager;
+    LocationListener myLocationListener = new MyLocationListener();
     DataRetriever getter;
     int route = 2; //getRouteID from activity file.
     int step =1;
@@ -95,6 +97,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         Intent checkTTSIntent = new Intent();
         checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(checkTTSIntent, MY_DATA_CHECK_CODE);
+        myLocationManager = (LocationManager) getSystemService(ElevenMileRoute.this.LOCATION_SERVICE);
+        myLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 3, this.myLocationListener);
     }
 
     // set your map and enable default zoom controls
@@ -254,30 +258,6 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
-                Location waypoint = new Location("currentWaypoint");
-                waypoint.setLatitude(CurrLeg[0]);
-                waypoint.setLongitude(CurrLeg[1]);
-                //
-                Location position = new Location("currentPosi");
-
-                LocationManager myLocationManager = (LocationManager) getSystemService(ElevenMileRoute.this.LOCATION_SERVICE);
-
-                position = myLocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-                //position.setLatitude(posi.getLatitude());
-                //position.setLongitude(posi.getLongitude());
-
-                float dist = waypoint.distanceTo(position);
-
-                if (dist > 30 && dist < 60 && count % 2 == 0) {
-                    speakWords(getter.getLongDirectionText(route, step));
-                    CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
-                    CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
-                    count++;
-                } else if (dist < 30 && count % 2 == 1) {
-                    speakWords(getter.getShortDirectionText(route, step++));
-                    count++;
-                }
                 createRouteButton.setEnabled(true);
             }
         });
@@ -297,7 +277,46 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
             }
         });
 
-}
+    }
+
+    public class MyLocationListener implements LocationListener {
+
+        @Override
+        public void onLocationChanged(Location location) {
+            Location waypoint = new Location("currentWaypoint");
+            waypoint.setLatitude(CurrLeg[0]);
+            waypoint.setLongitude(CurrLeg[1]);
+
+            float dist = waypoint.distanceTo(location);
+
+            if (dist > 30 && dist < 60 && count % 2 == 0) {
+                speakWords(getter.getLongDirectionText(route, step));
+                CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
+                CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
+                count++;
+            } else if (dist < 30 && count % 2 == 1) {
+                speakWords(getter.getShortDirectionText(route, step++));
+                count++;
+            }
+
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
+
+    }
 
 }
 
