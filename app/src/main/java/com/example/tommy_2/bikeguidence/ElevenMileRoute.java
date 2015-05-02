@@ -60,6 +60,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     Double [] CurrLeg;
 
     protected MapView map;
+
     private MyLocationOverlay myLocationOverlay;
     protected LineOverlay routeLine = new LineOverlay();
     //TTS object
@@ -258,20 +259,22 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 waypoint.setLongitude(CurrLeg[1]);
                 //
                 Location position = new Location("currentPosi");
-                GeoPoint posi = myLocationOverlay.getMyLocation();
-                position.setLatitude(posi.getLatitude());
-                position.setLongitude(posi.getLongitude());
-                
+
+                LocationManager myLocationManager = (LocationManager) getSystemService(ElevenMileRoute.this.LOCATION_SERVICE);
+
+                position = myLocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+                //position.setLatitude(posi.getLatitude());
+                //position.setLongitude(posi.getLongitude());
+
                 float dist = waypoint.distanceTo(position);
 
-
-                if(dist > 30 && dist < 60 && count % 2 == 0){
+                if (dist > 30 && dist < 60 && count % 2 == 0) {
                     speakWords(getter.getLongDirectionText(route, step));
                     CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
                     CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
                     count++;
-                }
-                else if(dist < 30 && count % 2 == 1){
+                } else if (dist < 30 && count % 2 == 1) {
                     speakWords(getter.getShortDirectionText(route, step++));
                     count++;
                 }
