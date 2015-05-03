@@ -3,6 +3,8 @@
 package com.example.tommy_2.bikeguidence;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.location.*;
 import android.net.Uri;
 import android.os.Bundle;
@@ -241,6 +243,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         final RelativeLayout itineraryLayout = (RelativeLayout) findViewById(R.id.itineraryLayout);
         final Button createRouteButton = (Button) findViewById(R.id.createRouteButton);
         final RouteManager routeManager = new RouteManager(this);
+        Paint routeColor = new Paint();
+        routeColor.setColor(new Color().argb(230, 208, 81, 4));
         routeManager.setMapView(mapView);
         routeManager.setItineraryView(itinerary);
         routeManager.setDebug(true);
