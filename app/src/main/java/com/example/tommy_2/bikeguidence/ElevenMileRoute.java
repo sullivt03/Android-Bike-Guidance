@@ -51,6 +51,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
+    float speed;
+    AverageSpeed avgSpeed = new AverageSpeed();
     LocationManager myLocationManager;
     LocationListener myLocationListener = new MyLocationListener();
     DataRetriever getter;
@@ -302,7 +304,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 }
                 count++;
             }
-
+            speed = avgSpeed.update(location.getSpeed());
         }
 
         @Override
