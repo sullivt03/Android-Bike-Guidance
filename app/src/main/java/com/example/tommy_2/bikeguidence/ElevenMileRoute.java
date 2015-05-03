@@ -18,8 +18,6 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.mapquest.android.maps.LineOverlay;
-import com.mapquest.android.maps.RouteResponse.Route;
-import com.mapquest.android.maps.RouteResponse.Route.Leg;
 
 import com.mapquest.android.maps.GeoPoint;
 import com.mapquest.android.maps.MapView;
@@ -34,39 +32,21 @@ import java.util.Locale;
 
 public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
 
-    ArrayList<String> points = new ArrayList<String>(){{
-            add("39.711845 , -75.116701");
-            add("39.711952 , -75.115950");
-            add("39.707586 , -75.111090");
-            add("39.706645 , -75.111111");
-            add("39.706950 , -75.113944");
-            add("39.711209 , -75.127484");
-            add("39.713784 , -75.123535");
-            add("39.711581 , -75.120370");
-            add("39.711160 , -75.119319");
-            add("39.711952 , -75.115950");
-            add("39.715765 , -75.120596");
-            add("39.713784 , -75.123535");
-            add("39.712563 , -75.121819");
-    }};
-
-
+    private ArrayList<String> points = setPoints();
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
-    float speed;
-    AverageSpeed avgSpeed = new AverageSpeed();
-    LocationManager myLocationManager;
-    LocationListener myLocationListener = new MyLocationListener();
-    DataRetriever getter;
-    int route = 2; //getRouteID from activity file.
-    int step =1;
-    int count = 0;
-    String lat;
-    String lon;
-    Double [] CurrLeg;
-
+    private float speed;
+    private AverageSpeed avgSpeed = new AverageSpeed();
+    private LocationManager myLocationManager;
+    private LocationListener myLocationListener = new MyLocationListener();
+    private DataRetriever getter;
+    private int route = 2; //getRouteID from activity file.
+    private int step = 1;
+    private int count = 0;
+    private String lat;
+    private String lon;
+    private Double [] CurrLeg;
     protected MapView map;
-
     private MyLocationOverlay myLocationOverlay;
     protected LineOverlay routeLine = new LineOverlay();
     //TTS object
@@ -278,6 +258,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 //String startAt = getText(start);
                 //String endAt = getText(end);
                 //routeManager.createRoute(startAt, endAt);
+
                 routeManager.createRoute(points);
                 //speakWords();
             }
@@ -308,7 +289,9 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 }
                 count++;
             }
-            speed = avgSpeed.update(location.getSpeed());
+            if (location.getSpeed() > 1.5) {
+                speed = avgSpeed.update(location.getSpeed());
+            }
         }
 
         @Override
@@ -326,6 +309,16 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
         }
 
+    }
+
+    public ArrayList<String> setPoints () {
+        ArrayList<String> result = new ArrayList<String>();
+        for (int i = 0; i < getter.getNumSteps(route); i++) {
+            String geopoint = getter.getLat(route, i) + ", " + getter.getLon(route, i);
+            result.add(geopoint);
+        }
+        result.trimToSize();
+        return result;
     }
 
 }
