@@ -228,11 +228,13 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         Paint routeColor = new Paint();
         routeColor.setColor(new Color().argb(230, 208, 81, 4));
         routeManager.setMapView(mapView);
+        routeManager.setRouteRibbonPaint(routeColor);
         routeManager.setItineraryView(itinerary);
         routeManager.setDebug(true);
         routeManager.setRouteCallback(new RouteManager.RouteCallback() {
             @Override
             public void onError(RouteResponse routeResponse) {
+                /*
                 ServiceResponse.Info info = routeResponse.info;
                 int statusCode = info.statusCode;
 
@@ -241,6 +243,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                         .append("Error: ").append(statusCode).append("\n")
                         .append("Message: ").append(info.messages);
                 Toast.makeText(getApplicationContext(), message.toString(), Toast.LENGTH_LONG).show();
+                */
                 createRouteButton.setEnabled(true);
             }
 
