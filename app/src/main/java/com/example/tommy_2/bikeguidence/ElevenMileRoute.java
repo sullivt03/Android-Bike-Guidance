@@ -1,5 +1,3 @@
-//this is a test comment to see if it works
-
 package com.example.tommy_2.bikeguidence;
 
 import android.content.Intent;
@@ -32,15 +30,14 @@ import java.util.Locale;
 
 public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
 
-    private ArrayList<String> points = setPoints();
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
     private float speed;
-    private AverageSpeed avgSpeed = new AverageSpeed();
+    //private AverageSpeed avgSpeed = new AverageSpeed();
     private LocationManager myLocationManager;
     private LocationListener myLocationListener = new MyLocationListener();
     private DataRetriever getter;
-    private int route = 2; //getRouteID from activity file.
+    private int route = 1; //getRouteID from activity file.
     private int step = 1;
     private int count = 0;
     private String lat;
@@ -72,6 +69,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         setupMapView();
         setupMyLocation();
         getter = new DataRetriever(ElevenMileRoute.this);
+        //points = setPoints();
         lat = getter.getLat(route,step);
         lon = getter.getLon(route, step);
         CurrLeg = new Double[]{Double.parseDouble(lat), Double.parseDouble(lon)};
@@ -223,16 +221,21 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         final RelativeLayout itineraryLayout = (RelativeLayout) findViewById(R.id.itineraryLayout);
         final Button createRouteButton = (Button) findViewById(R.id.createRouteButton);
         final RouteManager routeManager = new RouteManager(this);
-        Paint routeColor = new Paint();
-        routeColor.setColor(new Color().argb(230, 208, 81, 4));
-        routeManager.setMapView(mapView);
+        final Paint routeColor = new Paint(Paint.ANTI_ALIAS_FLAG);
+        routeColor.setColor(new Color().rgb(208, 81, 4));
+        routeColor.setAlpha(100);
+        routeColor.setStyle(Paint.Style.STROKE);
+        routeColor.setStrokeJoin(Paint.Join.ROUND);
+        routeColor.setStrokeCap(Paint.Cap.ROUND);
+        routeColor.setStrokeWidth(5);
         routeManager.setRouteRibbonPaint(routeColor);
+        routeManager.setMapView(mapView);
         routeManager.setItineraryView(itinerary);
         routeManager.setDebug(true);
         routeManager.setRouteCallback(new RouteManager.RouteCallback() {
             @Override
             public void onError(RouteResponse routeResponse) {
-                /*
+
                 ServiceResponse.Info info = routeResponse.info;
                 int statusCode = info.statusCode;
 
@@ -241,15 +244,17 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                         .append("Error: ").append(statusCode).append("\n")
                         .append("Message: ").append(info.messages);
                 Toast.makeText(getApplicationContext(), message.toString(), Toast.LENGTH_LONG).show();
-                */
+
                 createRouteButton.setEnabled(true);
             }
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
                 createRouteButton.setEnabled(true);
+
             }
         });
+
 
 
         //create an onclick listener for the instructional text
@@ -262,7 +267,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 //String endAt = getText(end);
                 //routeManager.createRoute(startAt, endAt);
 
-                routeManager.createRoute(points);
+                routeManager.createRoute(setPoints());
+
                 //speakWords();
             }
         });
@@ -292,9 +298,9 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 }
                 count++;
             }
-            if (location.getSpeed() > 1.5) {
-                speed = avgSpeed.update(location.getSpeed());
-            }
+            //if (location.getSpeed() > 1.5) {
+            //    speed = avgSpeed.update(location.getSpeed());
+            //}
         }
 
         @Override
@@ -316,8 +322,10 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
     public ArrayList<String> setPoints () {
         ArrayList<String> result = new ArrayList<String>();
-        for (int i = 0; i < getter.getNumSteps(route); i++) {
-            String geopoint = getter.getLat(route, i) + ", " + getter.getLon(route, i);
+        for (int i = 1; i <=getter.getNumSteps(route); i++) {
+            String geopoint = getter.getLat(route, i);
+            geopoint += " , ";
+            geopoint += getter.getLon(route, i);
             result.add(geopoint);
         }
         result.trimToSize();
