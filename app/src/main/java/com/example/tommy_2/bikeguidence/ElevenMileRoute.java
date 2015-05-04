@@ -3,7 +3,6 @@
 package com.example.tommy_2.bikeguidence;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.location.*;
@@ -30,6 +29,7 @@ import com.mapquest.android.maps.ServiceResponse;
 import java.util.ArrayList;
 import java.util.Locale;
 
+
 public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
 
     private ArrayList<String> points = setPoints();
@@ -43,7 +43,6 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     private int route = 2; //getRouteID from activity file.
     private int step = 1;
     private int count = 0;
-    private final String wrongTurn = "You are off the route. Please make the next legal U-turn.";
     private String lat;
     private String lon;
     private Double [] CurrLeg;
@@ -72,7 +71,6 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         setContentView(R.layout.eleven_mile_preview);
         setupMapView();
         setupMyLocation();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getter = new DataRetriever(ElevenMileRoute.this);
         lat = getter.getLat(route,step);
         lon = getter.getLon(route, step);
@@ -276,28 +274,19 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         @Override
         public void onLocationChanged(Location location) {
             Location waypoint = new Location("currentWaypoint");
-            Location endWay = new Location("nextWaypoint");
             waypoint.setLatitude(CurrLeg[0]);
             waypoint.setLongitude(CurrLeg[1]);
-            endWay.setLatitude(Double.parseDouble(getter.getLat(route, step + 1)));
-            endWay.setLongitude(Double.parseDouble(getter.getLon(route, step + 1)));
 
             float dist = waypoint.distanceTo(location);
-            float correctBearing = waypoint.bearingTo(endWay);
 
-            if (dist > 15 && dist < 30 && ((location.getBearing() + 30) % 360 >= correctBearing || (location.getBearing() - 30) % 360 <= correctBearing)) {
-                if (voiceOn){
-                    speakWords(wrongTurn);
-                }
-            }
-            else if (dist > 15 && dist < 30 && count % 2 == 0) {
+            if (dist > 30 && dist < 60 && count % 2 == 0) {
                 if (voiceOn) {
                     speakWords(getter.getLongDirectionText(route, step));
                 }
                 CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
                 CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
                 count++;
-            } else if (dist < 15 && count % 2 == 1) {
+            } else if (dist < 30 && count % 2 == 1) {
                 if (voiceOn) {
                     speakWords(getter.getShortDirectionText(route, step++));
                 }
