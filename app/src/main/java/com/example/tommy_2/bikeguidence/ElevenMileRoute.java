@@ -1,53 +1,37 @@
-
 //this is a test comment to see if it works
 
-        package com.example.tommy_2.bikeguidence;
+package com.example.tommy_2.bikeguidence;
 
-        import android.content.Intent;
-        import android.graphics.Color;
-        import android.graphics.Paint;
-        import android.location.*;
-        import android.net.Uri;
-        import android.os.Bundle;
-        import android.speech.tts.TextToSpeech;
-        import android.view.Menu;
-        import android.view.MenuInflater;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.webkit.WebView;
-        import android.widget.Button;
-        import android.widget.RelativeLayout;
-        import android.widget.Toast;
-        import com.mapquest.android.maps.LineOverlay;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.location.*;
+import android.net.Uri;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+import com.mapquest.android.maps.LineOverlay;
 
-        import com.mapquest.android.maps.GeoPoint;
-        import com.mapquest.android.maps.MapView;
-        import com.mapquest.android.maps.MyLocationOverlay;
-        import com.mapquest.android.maps.RouteManager;
-        import com.mapquest.android.maps.RouteResponse;
-        import com.mapquest.android.maps.ServiceResponse;
+import com.mapquest.android.maps.GeoPoint;
+import com.mapquest.android.maps.MapView;
+import com.mapquest.android.maps.MyLocationOverlay;
+import com.mapquest.android.maps.RouteManager;
+import com.mapquest.android.maps.RouteResponse;
+import com.mapquest.android.maps.ServiceResponse;
 
-        import java.util.ArrayList;
-        import java.util.Locale;
+import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
-
-    ArrayList<String> points = new ArrayList<String>(){{
-        add("39.711845 , -75.116701");
-        add("39.711952 , -75.115950");
-        add("39.707586 , -75.111090");
-        add("39.706645 , -75.111111");
-        add("39.706950 , -75.113944");
-        add("39.711209 , -75.127484");
-        add("39.713784 , -75.123535");
-        add("39.711581 , -75.120370");
-        add("39.711160 , -75.119319");
-        add("39.711952 , -75.115950");
-        add("39.715765 , -75.120596");
-        add("39.713784 , -75.123535");
-        add("39.712563 , -75.121819");
-    }};
+    
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
     private float speed;
@@ -87,7 +71,6 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         setupMapView();
         setupMyLocation();
         getter = new DataRetriever(ElevenMileRoute.this);
-        //points = setPoints();
         lat = getter.getLat(route,step);
         lon = getter.getLon(route, step);
         CurrLeg = new Double[]{Double.parseDouble(lat), Double.parseDouble(lon)};
@@ -247,13 +230,12 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         routeColor.setStrokeCap(Paint.Cap.ROUND);
         routeColor.setStrokeWidth(5);
         routeManager.setRouteRibbonPaint(routeColor);
-        routeManager.setMapView(mapView);
         routeManager.setItineraryView(itinerary);
         routeManager.setDebug(true);
         routeManager.setRouteCallback(new RouteManager.RouteCallback() {
             @Override
             public void onError(RouteResponse routeResponse) {
-
+                
                 ServiceResponse.Info info = routeResponse.info;
                 int statusCode = info.statusCode;
 
@@ -262,17 +244,15 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                         .append("Error: ").append(statusCode).append("\n")
                         .append("Message: ").append(info.messages);
                 Toast.makeText(getApplicationContext(), message.toString(), Toast.LENGTH_LONG).show();
-
+                
                 createRouteButton.setEnabled(true);
             }
 
             @Override
             public void onSuccess(RouteResponse routeResponse) {
                 createRouteButton.setEnabled(true);
-
             }
         });
-
 
 
         //create an onclick listener for the instructional text
@@ -285,8 +265,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 //String endAt = getText(end);
                 //routeManager.createRoute(startAt, endAt);
 
-                routeManager.createRoute(points);
-
+                routeManager.createRoute(setPoints());
                 //speakWords();
             }
         });
@@ -340,10 +319,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
     public ArrayList<String> setPoints () {
         ArrayList<String> result = new ArrayList<String>();
-        for (int i = 0; i < getter.getNumSteps(route); i++) {
-            String geopoint = getter.getLat(route, i);
-            geopoint += " , ";
-            geopoint += getter.getLon(route, i);
+        for (int i = 1; i <= getter.getNumSteps(route); i++) {
+            String geopoint = getter.getLat(route, i) + ", " + getter.getLon(route, i);
             result.add(geopoint);
         }
         result.trimToSize();
