@@ -24,11 +24,6 @@ public class About_Screen extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about__screen);
         TextView textViewToChange = (TextView) findViewById(R.id.aboutInformation);
-
-        Button closeButton = (Button) findViewById(R.id.close);
-        closeButton.setOnClickListener(this);
-
-
         setAboutInfoText("About Information Text Place Holder");
         textViewToChange.setText(aboutInfoText);
     }
