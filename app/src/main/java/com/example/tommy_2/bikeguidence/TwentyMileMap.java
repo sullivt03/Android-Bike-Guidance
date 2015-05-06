@@ -133,6 +133,7 @@ public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListe
         MenuItem voice = menu.findItem(R.id.voiceOn);
         MenuItem pause = menu.findItem(R.id.pauseRoute);
         MenuItem change = menu.findItem(R.id.changeRoute);
+        MenuItem about = menu.findItem(R.id.aboutScreen);
         MenuItem call = menu.findItem(R.id.call);
         voice.setChecked(voiceOn);
         pause.setChecked(pauseRoute);
@@ -148,25 +149,19 @@ public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListe
                 return true;
             case R.id.pauseRoute:
                 pauseRoute = !item.isChecked();
-                if (pauseRoute) {
-                    onPause();
-                    voiceOn = !voiceOn;
-                }
-                else {
-                    onResume();
-                    voiceOn = !voiceOn;
-                }
                 item.setChecked(pauseRoute);
                 return true;
             case R.id.changeRoute:
                 //call the change route menu
-                Intent intent = new Intent(this, RouteSelection.class);
-                startActivity(intent);
-                return true;
-            case R.id.call:
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:7325399759"));
                 startActivity(callIntent);
+                return true;
+            case R.id.aboutScreen:
+                Intent intent = new Intent(TwentyMileMap.this, About_Screen.class);
+                startActivity(intent);
+            case R.id.call:
+                //make phone call to event help line
                 return true;
             default:
                 return false;

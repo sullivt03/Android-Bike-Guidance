@@ -44,6 +44,7 @@ public class Login extends ActionBarActivity {
         MenuItem voice = menu.findItem(R.id.voiceOn);
         MenuItem pause = menu.findItem(R.id.pauseRoute);
         MenuItem change = menu.findItem(R.id.changeRoute);
+        MenuItem about = menu.findItem(R.id.aboutScreen);
         MenuItem call = menu.findItem(R.id.call);
         voice.setChecked(voiceOn);
         pause.setChecked(pauseRoute);
@@ -67,6 +68,9 @@ public class Login extends ActionBarActivity {
                 callIntent.setData(Uri.parse("tel:7325399759"));
                 startActivity(callIntent);
                 return true;
+            case R.id.aboutScreen:
+                Intent intent = new Intent(Login.this, About_Screen.class);
+                startActivity(intent);
             case R.id.call:
                 //make phone call to event help line
                 return true;
