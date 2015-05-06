@@ -16,6 +16,11 @@
     android:showAsAction="never"
 
     <item
+        android:id="@+id/aboutScreen"
+        android:title="@string/about_title"/>
+    android:showAsAction="never"
+
+    <item
         android:id="@+id/call"
         android:title="@string/call_title"/>
     android:showAsAction="never"

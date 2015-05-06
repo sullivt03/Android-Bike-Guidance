@@ -17,3 +17,16 @@ allprojects {
         jcenter()
     }
 }
+apply plugin: 'java'
+apply from: 'j2objc.gradle'
+
+j2objcConfig {
+    // MODIFY to where your unzipped j2objc directory is located
+    // NOTE download the latest version from: https://github.com/google/j2objc/releases
+    j2objcHome "C:/Users/Me/Documents/J2ObjC/j2objc-0.9.7/j2objc"  // e.g. "${projectDir}/../../j2objc or absolute path
+
+    // MODIFY to where generated objc files should be put for Xcode project
+    // NOTE these files should be checked in to the repository and updated as needed
+    // NOTE this should contain ONLY j2objc generated files, other contents will be deleted
+    destDir "C:/Users/Me/Documents/j2obj-generated"  // e.g. "${projectDir}/../Xcode/j2objc-generated"
+}
