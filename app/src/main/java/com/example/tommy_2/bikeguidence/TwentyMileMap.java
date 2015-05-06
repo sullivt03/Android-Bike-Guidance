@@ -106,7 +106,7 @@ public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListe
             public void run() {
                 GeoPoint currentLocation = myLocationOverlay.getMyLocation();
                 map.getController().animateTo(currentLocation);
-                map.getController().setZoom(18);
+                map.getController().setZoom(14);
                 map.getOverlays().add(myLocationOverlay);
                 myLocationOverlay.setFollowing(true);
             }
@@ -271,12 +271,9 @@ public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListe
             public void onClick(View view) {
                 createRouteButton.setEnabled(false);
                 createRouteButton.setVisibility(View.GONE);
-                //String startAt = getText(start);
-                //String endAt = getText(end);
-                //routeManager.createRoute(startAt, endAt);
                 routeManager.createRoute(points);
+                mapView.getController().setZoom(18);
                 routeManager.setMapView(mapView);
-                //speakWords();
             }
         });
 
@@ -318,34 +315,6 @@ public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListe
                 speed = avgSpeed.update(location.getSpeed());
             }
         }
-
-        /*
-        @Override
-        public void onLocationChanged(Location location) {
-            Location waypoint = new Location("currentWaypoint");
-            waypoint.setLatitude(CurrLeg[0]);
-            waypoint.setLongitude(CurrLeg[1]);
-
-            float dist = waypoint.distanceTo(location);
-
-            if (dist > 30 && dist < 60 && count % 2 == 0) {
-                if (voiceOn) {
-                    speakWords(getter.getLongDirectionText(route, step));
-                }
-                CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
-                CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
-                count++;
-            } else if (dist < 30 && count % 2 == 1) {
-                if (voiceOn) {
-                    speakWords(getter.getShortDirectionText(route, step++));
-                }
-                count++;
-            }
-            //if (location.getSpeed() > 1.5) {
-            //    speed = avgSpeed.update(location.getSpeed());
-            //}
-        }
-        */
 
         @Override
         public void onStatusChanged(String provider, int status, Bundle extras) {
