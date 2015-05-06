@@ -12,6 +12,7 @@
         <string name="pause_title">Pause route guidance: </string>
         <string name="call_title">Call event help-line </string>
         <string name="title_activity_download">Download</string>
+        <string name="about_title">Look at about screen info</string>
 
         <string name="hello_world">Hello world!</string>
         <string name="title_activity_download2">Download2</string>
