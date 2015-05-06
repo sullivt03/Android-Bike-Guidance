@@ -29,7 +29,7 @@ import org.xmlpull.v1.XmlPullParserException;
 public class Download extends ActionBarActivity {
     private TextView textView;
     Context context;
-    private String Download_path = "http://elvis.rowan.edu/~romanol8/dFile.xml";
+    private String Download_path = "http://elvis.rowan.edu/~palazz33/dFile.xml";
     String Download_ID = "DOWNLOAD_ID";  //DownloadManager returned reference                       //temp
     DownloadManager downloadManager;
     SharedPreferences preferenceManager; //for storing download id reference in a file

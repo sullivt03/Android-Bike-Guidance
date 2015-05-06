@@ -16,11 +16,6 @@ import android.widget.TextView;
 
 public class About_Screen extends Activity implements View.OnClickListener
 {
-    private Animation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
-    //private Animation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ;
-    private final View aboutView = findViewById(R.id.fadeLayer);
-    private final int fadeDuration = 1000;
-    private TextView textViewToChange = (TextView) findViewById(R.id.aboutInformation);
     private String aboutInfoText;
 
     @Override
@@ -28,26 +23,7 @@ public class About_Screen extends Activity implements View.OnClickListener
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about__screen);
-
-        fadeIn.setDuration(fadeDuration);
-        //fadeOut.setDuration(fadeDuration);
-        fadeIn.setAnimationListener(new AnimationListener()
-        {
-
-            @Override
-            public void onAnimationStart(Animation animation) {}
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {}
-
-            @Override
-            public void onAnimationEnd(Animation animation)
-            {
-                aboutView.setVisibility(View.VISIBLE);
-            }
-        });
-
-        aboutView.startAnimation(fadeIn);
+        TextView textViewToChange = (TextView) findViewById(R.id.aboutInformation);
 
         Button closeButton = (Button) findViewById(R.id.close);
         closeButton.setOnClickListener(this);
@@ -60,8 +36,7 @@ public class About_Screen extends Activity implements View.OnClickListener
     @Override
     public void onClick(View v)
     {
-        //Intent i = new Intent(About_Screen.this, previous.class);//need to add correct activity name
-        // startActivity(i);
+
     }
 
     public void setAboutInfoText(String aboutInfoText)

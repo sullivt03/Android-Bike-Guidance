@@ -154,7 +154,7 @@ public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListe
             case R.id.changeRoute:
                 //call the change route menu
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:7325399759"));
+                callIntent.setData(Uri.parse("tel:" + getter.getHelpLine()));
                 startActivity(callIntent);
                 return true;
             case R.id.aboutScreen:
