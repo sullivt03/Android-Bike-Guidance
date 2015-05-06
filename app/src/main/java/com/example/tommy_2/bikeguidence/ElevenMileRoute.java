@@ -31,11 +31,13 @@ import java.util.Locale;
 
 
 public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
-    
+
+    private ArrayList<String> points;
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
     private float speed;
-    //private AverageSpeed avgSpeed = new AverageSpeed();
+    private AverageSpeed avgSpeed = new AverageSpeed();
+    private final String wrongTurn = "You are off the route. Please make the next legal U-turn.";
     private LocationManager myLocationManager;
     private LocationListener myLocationListener = new MyLocationListener();
     private DataRetriever getter;
@@ -71,7 +73,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         setupMapView();
         setupMyLocation();
         getter = new DataRetriever(ElevenMileRoute.this);
-        lat = getter.getLat(route,step);
+        points = setPoints();
+        lat = getter.getLat(route, step);
         lon = getter.getLon(route, step);
         CurrLeg = new Double[]{Double.parseDouble(lat), Double.parseDouble(lon)};
         init();
@@ -81,7 +84,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
         checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(checkTTSIntent, MY_DATA_CHECK_CODE);
         myLocationManager = (LocationManager) getSystemService(ElevenMileRoute.this.LOCATION_SERVICE);
-        myLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 3, this.myLocationListener);
+        myLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 5, this.myLocationListener);
     }
 
     // set your map and enable default zoom controls
@@ -99,7 +102,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
             public void run() {
                 GeoPoint currentLocation = myLocationOverlay.getMyLocation();
                 map.getController().animateTo(currentLocation);
-                map.getController().setZoom(14);
+                map.getController().setZoom(18);
                 map.getOverlays().add(myLocationOverlay);
                 myLocationOverlay.setFollowing(true);
             }
@@ -145,6 +148,14 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 return true;
             case R.id.pauseRoute:
                 pauseRoute = !item.isChecked();
+                if (pauseRoute) {
+                    onPause();
+                    voiceOn = !voiceOn;
+                }
+                else {
+                    onResume();
+                    voiceOn = !voiceOn;
+                }
                 item.setChecked(pauseRoute);
                 return true;
             case R.id.changeRoute:
@@ -177,7 +188,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     private void speakWords(String s) {
         String speech = "In point two miles, turn left onto Carpenter Street";
         //speak straight away
-        myTTS.speak(s, TextToSpeech.QUEUE_FLUSH, null);
+        myTTS.speak(s, TextToSpeech.QUEUE_ADD, null);
     }
 
     //act on result of TTS data check
@@ -264,8 +275,8 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
                 //String startAt = getText(start);
                 //String endAt = getText(end);
                 //routeManager.createRoute(startAt, endAt);
-
-                routeManager.createRoute(setPoints());
+                routeManager.createRoute(points);
+                routeManager.setMapView(mapView);
                 //speakWords();
             }
         });
@@ -274,6 +285,42 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
     public class MyLocationListener implements LocationListener {
 
+        @Override
+        public void onLocationChanged(Location location) {
+
+            Location waypoint = new Location("currentWaypoint");
+            Location endWay = new Location("nextWaypoint");
+            waypoint.setLatitude(CurrLeg[0]);
+            waypoint.setLongitude(CurrLeg[1]);
+            endWay.setLatitude(Double.parseDouble(getter.getLat(route, step + 1)));
+            endWay.setLongitude(Double.parseDouble(getter.getLon(route, step + 1)));
+
+            float dist = waypoint.distanceTo(location);
+            float correctBearing = waypoint.bearingTo(endWay);
+
+            if (dist > 20 && dist < 35 && ((location.getBearing() + 30) % 360 >= correctBearing || (location.getBearing() - 30) % 360 <= correctBearing) && count % 2 == 0) {
+                if (voiceOn) {
+                    speakWords(wrongTurn);
+                }
+            } else if (dist > 15 && dist < 30 && count % 2 == 0) {
+                if (voiceOn) {
+                    speakWords(getter.getLongDirectionText(route, step));
+                }
+                CurrLeg[0] = Double.parseDouble(getter.getLat(route, step + 1));
+                CurrLeg[1] = Double.parseDouble(getter.getLon(route, step + 1));
+                count++;
+            } else if (dist < 15 && count % 2 == 1) {
+                if (voiceOn) {
+                    speakWords(getter.getShortDirectionText(route, step++));
+                }
+                count++;
+            }
+            if (location.getSpeed() > 1.5) {
+                speed = avgSpeed.update(location.getSpeed());
+            }
+        }
+
+        /*
         @Override
         public void onLocationChanged(Location location) {
             Location waypoint = new Location("currentWaypoint");
@@ -299,6 +346,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
             //    speed = avgSpeed.update(location.getSpeed());
             //}
         }
+        */
 
         @Override
         public void onStatusChanged(String provider, int status, Bundle extras) {
@@ -320,7 +368,9 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     public ArrayList<String> setPoints () {
         ArrayList<String> result = new ArrayList<String>();
         for (int i = 1; i <= getter.getNumSteps(route); i++) {
-            String geopoint = getter.getLat(route, i) + ", " + getter.getLon(route, i);
+            String geopoint = getter.getLat(route, i);
+            geopoint += ", ";
+            geopoint += getter.getLon(route, i);
             result.add(geopoint);
         }
         result.trimToSize();
