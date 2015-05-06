@@ -41,7 +41,7 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
     private LocationManager myLocationManager;
     private LocationListener myLocationListener = new MyLocationListener();
     private DataRetriever getter;
-    private int route = 2; //getRouteID from activity file.
+    private int route = 1; //getRouteID from activity file.
     private int step = 1;
     private int count = 0;
     private String lat;
@@ -363,6 +363,18 @@ public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitLis
 
         }
 
+    }
+
+    public ArrayList<String> setPoints (int start, int end) {
+        ArrayList<String> result = new ArrayList<String>();
+        for (int i = start + 1; i <= end; i++) {
+            String geopoint = getter.getLat(route, i);
+            geopoint += ", ";
+            geopoint += getter.getLon(route, i);
+            result.add(geopoint);
+        }
+        result.trimToSize();
+        return result;
     }
 
     public ArrayList<String> setPoints () {
