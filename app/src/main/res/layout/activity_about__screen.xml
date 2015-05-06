@@ -26,15 +26,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/close"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Close"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
-    </Button>
-
     <View
         android:id="@+id/fadeLayer"
         android:visibility="invisible"
