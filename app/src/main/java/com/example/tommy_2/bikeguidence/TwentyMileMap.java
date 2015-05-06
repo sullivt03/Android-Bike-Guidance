@@ -33,6 +33,10 @@ import java.util.Locale;
 public class TwentyMileMap extends SimpleMap implements TextToSpeech.OnInitListener {
 
     private ArrayList<String> points;
+    private ArrayList<String> restAreas = new ArrayList<String> () {{
+        add("41.131641, -73.289735");
+        add("41.124772, -73.200177");
+    }};
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
     private float speed;

@@ -18,11 +18,15 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.mapquest.android.maps.BoundingBox;
+import com.mapquest.android.maps.DrawableOverlay;
 import com.mapquest.android.maps.LineOverlay;
 
 import com.mapquest.android.maps.GeoPoint;
 import com.mapquest.android.maps.MapView;
 import com.mapquest.android.maps.MyLocationOverlay;
+import com.mapquest.android.maps.OverlayItem;
 import com.mapquest.android.maps.RouteManager;
 import com.mapquest.android.maps.RouteResponse;
 import com.mapquest.android.maps.ServiceResponse;
@@ -34,6 +38,12 @@ import java.util.Locale;
 public class ElevenMileRoute extends SimpleMap implements TextToSpeech.OnInitListener {
 
     private ArrayList<String> points;
+    private ArrayList<Double> restAreas = new ArrayList<Double> () {{
+        add(41.131641);
+        add(-73.289735);
+        add(41.124772);
+        add(-73.200177);
+    }};
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
     private float speed;

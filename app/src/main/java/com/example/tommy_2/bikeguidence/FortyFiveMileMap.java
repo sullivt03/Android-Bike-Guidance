@@ -34,11 +34,19 @@ public class FortyFiveMileMap extends SimpleMap implements TextToSpeech.OnInitLi
 
     private ArrayList<String> firstPoints;
     private ArrayList<String> restPoints;
+    private ArrayList<String> restAreas = new ArrayList<String> () {{
+        add("41.131641, -73.289735");
+        add("41.124772, -73.200177");
+        add("41.090251, -73.391044");
+        add("41.097935, -73.405547");
+        add("41.0556974, -73.478693");
+        add("41.059692, -73.439217");
+    }};
     private boolean voiceOn = true;
     private boolean pauseRoute = false;
     private float speed;
     private AverageSpeed avgSpeed = new AverageSpeed();
-    private final String wrongTurn = "You are off the route. Please make the next legal U-turn.";
+    private final String wrongTurn = "You are off the route. Please make the next legal U-turn to return to the designated route.";
     private LocationManager myLocationManager;
     private LocationListener myLocationListener = new MyLocationListener();
     private DataRetriever getter;
