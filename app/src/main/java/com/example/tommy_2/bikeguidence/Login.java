@@ -36,6 +36,7 @@ public class Login extends ActionBarActivity {
         super.onPause();
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -50,7 +51,9 @@ public class Login extends ActionBarActivity {
         pause.setChecked(pauseRoute);
         return true;
     }
+    */
 
+    /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -78,7 +81,7 @@ public class Login extends ActionBarActivity {
                 return false;
         }
     }
-
+    */
 
 
     public void sendUserInfo(View view) {
